@@ -1,0 +1,108 @@
+{
+  "recording": true,
+  "command": "uptime",
+  "commands": {
+    "echo": {
+      "args": [
+        "/usr/bin/echo",
+        "Correct content"
+      ],
+      "is_hex": false,
+      "stdin": ""
+    },
+    "cat": {
+      "args": [
+        "/usr/bin/cat"
+      ],
+      "is_hex": false,
+      "stdin": "Hello World! This is the new input!"
+    },
+    "cat2": {
+      "args": [
+        "/usr/bin/cat",
+        "/etc/passwd"
+      ],
+      "is_hex": false,
+      "stdin": ""
+    },
+    "cat3": {
+      "args": [
+        "/usr/bin/cat",
+        "/tmp/catfile"
+      ],
+      "is_hex": false,
+      "stdin": ""
+    },
+    "ping": {
+      "args": [
+        "/usr/bin/ping",
+        "-c",
+        "4",
+        "localhost"
+      ],
+      "is_hex": false,
+      "stdin": ""
+    },
+    "exit": {
+      "args": [
+        "/home/ubuntu/master-thesis/code/tests/exit"
+      ],
+      "is_hex": false,
+      "stdin": ""
+    },
+    "vi": {
+      "args": [
+        "/usr/bin/vi",
+        "/tmp/testfile"
+      ],
+      "is_hex": true,
+      "stdin": "3A310D6948656C6C6F20776F726C64211B3A77710D0A"
+    },
+    "print": {
+      "args": [
+        "/home/ubuntu/master-thesis/code/tests/print"
+      ],
+      "is_hex": true,
+      "stdin": ""
+    },
+    "hostname": {
+      "args": [
+        "/usr/bin/hostname"
+      ],
+      "is_hex": false,
+      "stdin": ""
+    },
+    "id": {
+      "args": [
+        "/usr/bin/id"
+      ],
+      "is_hex": false,
+      "stdin": ""
+    },
+    "buffertest": {
+      "args": [
+        "/home/ubuntu/master-thesis/code/tests/buffertest_corrupt"
+      ],
+      "is_hex": false,
+      "stdin": ""
+    },
+    "uptime": {
+      "args": [
+        "/usr/bin/uptime"
+      ],
+      "is_hex": false,
+      "stdin": ""
+    }
+  },
+  "container": {
+    "enable_container": false,
+    "mount_point": "/mnt",
+    "ol_lowerdir": "/home/ubuntu/debian",
+    "ol_upperdir": "/home/ubuntu/diff",
+    "ol_workdir": "/home/ubuntu/work"
+  },
+  "workdir": "/home/ubuntu/",
+  "stdout_file": "output.log",
+  "stderr_file": "output.log",
+  "verbosity": 1
+}

@@ -1,0 +1,130 @@
+metadata {
+  version: "cbcd16e710ad330cb52a71df64227403c0236919"
+  time_recorded: 1637857023
+  command {
+    argv: "/root/echo"
+    argv: "Hello world!"
+  }
+  number_of_syscalls: 30
+  job_name: "eval_echo"
+  sysinfo {
+    sysname: "Linux"
+    nodename: "sperrips"
+    release: "5.15.1-maiks"
+    version: "#3 SMP Tue Nov 16 11:15:05 CET 2021"
+    machine: "x86_64"
+    domainname: "(none)"
+  }
+  aslrInfo {
+    state: 2
+    ranges {
+      section: "/root/echo"
+      from: 93952092508160
+      to: 93952092516352
+    }
+    ranges {
+      section: "/root/echo"
+      from: 93952092516352
+      to: 93952092536832
+    }
+    ranges {
+      section: "/root/echo"
+      from: 93952092536832
+      to: 93952092549120
+    }
+    ranges {
+      section: "/root/echo"
+      from: 93952092549120
+      to: 93952092553216
+    }
+    ranges {
+      section: "/root/echo"
+      from: 93952092553216
+      to: 93952092557312
+    }
+    ranges {
+      section: "[heap]"
+      from: 93952108408832
+      to: 93952108544000
+    }
+    ranges {
+      from: 139714737238016
+      to: 139714737246208
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/libc-2.31.so"
+      from: 139714737246208
+      to: 139714737397760
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/libc-2.31.so"
+      from: 139714737397760
+      to: 139714738753536
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/libc-2.31.so"
+      from: 139714738753536
+      to: 139714739056640
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/libc-2.31.so"
+      from: 139714739056640
+      to: 139714739060736
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/libc-2.31.so"
+      from: 139714739060736
+      to: 139714739073024
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/libc-2.31.so"
+      from: 139714739073024
+      to: 139714739085312
+    }
+    ranges {
+      from: 139714739085312
+      to: 139714739101696
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/ld-2.31.so"
+      from: 139714739118080
+      to: 139714739122176
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/ld-2.31.so"
+      from: 139714739122176
+      to: 139714739253248
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/ld-2.31.so"
+      from: 139714739253248
+      to: 139714739286016
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/ld-2.31.so"
+      from: 139714739290112
+      to: 139714739294208
+    }
+    ranges {
+      section: "/usr/lib/x86_64-linux-gnu/ld-2.31.so"
+      from: 139714739294208
+      to: 139714739298304
+    }
+    ranges {
+      from: 139714739298304
+      to: 139714739302400
+    }
+    ranges {
+      section: "[stack]"
+      from: 140722986582016
+      to: 140722986717184
+    }
+    ranges {
+      section: "[vsyscall]"
+      from: -10485760
+      to: -10481664
+    }
+  }
+}
+equal: true
+

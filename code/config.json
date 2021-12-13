@@ -1,0 +1,23 @@
+{
+    "recording": true,
+    "command": "cat",
+    "lax_policy": false,
+    "commands": {
+        "echo": { "args": ["/root/echo"], "is_hex": false, "stdin": "Content from stdin" },
+        "cat": { "args": ["/root/cat", "/root/dir/hello_world.txt"], "is_hex": false, "stdin": ""},
+        "hostname": { "args": ["/root/hostname"], "is_hex": false, "stdin": ""},
+        "ping1": { "args": ["/root/ping_no_target_mod", "-c", "4", "127.0.0.1"], "is_hex": false, "stdin": ""},
+        "ping2": { "args": ["/root/ping_with_target_mod", "-c", "4", "127.0.0.1"], "is_hex": false, "stdin": ""}
+    },
+    "container": {
+        "enable_container": true,
+        "mount_point": "/mnt",
+        "ol_lowerdir": "/root/bullseye/",
+        "ol_upperdir": "/root/deb_diff/",
+        "ol_workdir": "/root/deb_work/"
+    },
+    "workdir": "/root/",
+    "stdout_file": "output.log",
+    "stderr_file": "output.log",
+    "verbosity": 1
+}

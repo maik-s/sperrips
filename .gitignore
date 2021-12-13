@@ -1,0 +1,8 @@
+code/proto_files/cpp_out
+code/sperrips
+utils/proto/Syscall_pb2.py
+*.bin
+code/utils/proto/Syscall_pb2.py
+code/bin
+code/version.h
+code/utils/proto/__pycache__/

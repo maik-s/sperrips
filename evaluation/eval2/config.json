@@ -1,0 +1,34 @@
+{
+    "recording": true,
+    "command": "eval_ping2",
+    "commands": {
+        "echo": { "args": ["/usr/bin/echo", "/etc/hostname"], "is_hex": false, "stdin": "" },
+        "cat": { "args": ["/usr/bin/cat"], "is_hex": false, "stdin": "Hello World! This is the new input!" },
+        "cat2": { "args": ["/usr/bin/cat", "/etc/passwd"], "is_hex": false, "stdin": "" },
+        "cat3": { "args": ["/usr/bin/cat", "/tmp/catfile"], "is_hex": false, "stdin": "" },
+        "ping": { "args": ["/usr/bin/ping", "-c", "4", "8.8.8.8"], "is_hex": false, "stdin": "" },
+        "exit": { "args": ["/home/ubuntu/master-thesis/code/tests/exit"], "is_hex": false, "stdin": "" },
+        "vi": { "args": ["/usr/bin/vi", "/tmp/testfile"], "is_hex": true, "stdin": "3A310D6948656C6C6F20776F726C64211B3A77710D0A" },
+        "print": { "args": ["/home/ubuntu/master-thesis/code/tests/print"], "is_hex": true, "stdin": "" },
+        "stderr": { "args": ["/home/ubuntu/master-thesis/code/tests/stderr"], "is_hex": true, "stdin": "" },
+        "hostname": { "args": ["/usr/bin/hostname"], "is_hex": false, "stdin": "" },
+        "hostname2": { "args": ["/tmp/hostname"], "is_hex": false, "stdin": "" },
+        "id": { "args": ["/usr/bin/id"], "is_hex": false, "stdin": "" },
+        "eval_cat": { "args": ["/root/cat", "/etc/hostname"], "is_hex": false, "stdin": "" },
+        "eval_echo": { "args": ["/root/echo", "Hello world!"], "is_hex": false, "stdin": "" },
+        "eval_ping": { "args": ["/root/ping_no_target_mod", "-c" , "4" , "127.0.0.1"], "is_hex": false, "stdin": "" },
+        "eval_ping2": { "args": ["/root/ping_with_target_mod", "-c" , "4" , "127.0.0.1"], "is_hex": false, "stdin": "" },
+        "eval_hostname": { "args": ["/root/hostname"], "is_hex": false, "stdin": "" }
+    },
+    "container": {
+        "enable_container": true,
+        "mount_point": "/mnt",
+        "ol_lowerdir": "/home/doerre/sperrips/bullseye/",
+        "ol_upperdir": "/home/doerre/sperrips/deb_diff/",
+        "ol_workdir": "/home/doerre/sperrips/deb_work/"
+    },
+    "workdir": "/root/",
+    "stdout_file": "output.log",
+    "stderr_file": "output.log",
+    "verbosity": 1
+}

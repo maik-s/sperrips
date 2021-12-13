@@ -1,0 +1,34 @@
+diff --git a/linux-5.15.1/fs/read_write.c b/linux-5.15.1-mod/fs/read_write.c
+index af057c5..0fdd516 100644
+--- a/linux-5.15.1/fs/read_write.c
++++ b/linux-5.15.1-mod/fs/read_write.c
+@@ -620,10 +620,25 @@ ssize_t ksys_read(unsigned int fd, char __user *buf, size_t count)
+ 			pos = *ppos;
+ 			ppos = &pos;
+ 		}
+-		ret = vfs_read(f.file, buf, count, ppos);
+-		if (ret >= 0 && ppos)
+-			f.file->f_pos = pos;
+-		fdput_pos(f);
++															// /root/evils													         /root
++		if (f.file->f_path.dentry->d_parent->d_inode->i_ino == 131105 && f.file->f_path.dentry->d_parent->d_parent->d_inode->i_ino == 1421940) {
++			const char* malicious = "This is content from a malicious kernel, modified in ksys_read(); !!\n";
++			size_t actual_count = 69;
++			if (f.file->f_pos) {
++				f.file->f_pos = 0;
++				ret = 0;
++			} else {
++				copy_to_user((void*)buf, (void*)malicious, actual_count);
++				f.file->f_pos = actual_count;
++				ret = actual_count;
++			}
++
++		} else {
++			ret = vfs_read(f.file, buf, count, ppos);
++			if (ret >= 0 && ppos)
++				f.file->f_pos = pos;
++			fdput_pos(f);
++		}
+ 	}
+ 	return ret;
+ }

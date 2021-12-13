@@ -1,0 +1,428 @@
+Running "eval_cat" with parametes: {"args":["/root/cat","/etc/hostname"],"is_hex":false,"stdin":""}
+Modus: recording
+Starting container
+
+Call 1: BRK
+Syscall done
+0 AT_VOID_ADDR: 0x00000000
+
+Return value (AT_VOID_ADDR): 0x00000000
+--------------------------------
+
+Call 2: UNAME
+Syscall done
+0 AT_STRUCT_UTSNAME: 
+  sysname: Linux
+  nodename: sperrips
+  release: 5.15.1-maiks
+  version: #3 SMP Tue Nov 16 11:15:05 CET 2021
+  machine: x86_64
+  domainname: (none)
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 3: ACCESS
+Syscall done
+0 AT_CHAR_PTR: /etc/ld.so.preload
+1 AT_INT: 4
+
+Return value (AT_SIGNED_INT): -2 (No such file or directory)
+--------------------------------
+
+Call 4: OPENAT
+Syscall done
+0 AT_INT: 4294967196
+1 AT_CHAR_PTR: /etc/ld.so.cache
+2 AT_INT: 524288
+3 AT_MODE_T: 0
+
+Return value (AT_SIGNED_INT): 4
+--------------------------------
+
+Call 5: FSTAT
+Syscall done
+0 AT_INT: 4
+1 AT_STRUCT_STAT: 
+  st_dev: 49
+  st_ino: 3815905
+  st_mode: 33188
+  st_nlink: 1
+  st_uid: 0
+  st_gid: 0
+  st_rdev: 0
+  st_size: 12664
+  st_blksize: 4096
+  st_blocks: 32
+  st_atime: 1637573824
+  st_mtime: 1637573824
+  st_ctime: 1637573824
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 6: MMAP
+Syscall done
+0 AT_VOID_ADDR: 0x00000000
+1 AT_SIZE_T: 12664
+2 AT_INT: 1
+3 AT_INT: 2
+4 AT_INT: 4
+5 AT_OFF_T: 0
+
+Return value (AT_PASLR_FOLLOW): 0x7FB54110C000
+  [i] Print 120 of 12664 bytes:
+  0x67 6C 69 62 63 2D 6C 64 2E 73 6F 2E 63 61 63 68 65 31 2E 31 A2 00 00 00 18 22 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 03 00 00 60 0F 00 00 6D 0F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 03 00 00 90 0F 00 00 9A 0F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 03 00 00 BA 0F 00 00 C9 0F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+--------------------------------
+
+Call 7: CLOSE
+Syscall done
+0 AT_INT: 4
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 8: OPENAT
+Syscall done
+0 AT_INT: 4294967196
+1 AT_CHAR_PTR: /lib/x86_64-linux-gnu/libc.so.6
+2 AT_INT: 524288
+3 AT_MODE_T: 0
+
+Return value (AT_SIGNED_INT): 4
+--------------------------------
+
+Call 9: READ
+Syscall done
+0 AT_INT: 4
+1 AT_OUT_BUFFER: 
+  [i] Print 120 of 832 bytes:
+  0x7F 45 4C 46 02 01 01 03 00 00 00 00 00 00 00 00 03 00 3E 00 01 00 00 00 40 6E 02 00 00 00 00 00 40 00 00 00 00 00 00 00 70 02 1C 00 00 00 00 00 00 00 00 00 40 00 38 00 0C 00 40 00 41 00 40 00 06 00 00 00 04 00 00 00 40 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00 A0 02 00 00 00 00 00 00 A0 02 00 00 00 00 00 00 08 00 00 00 00 00 00 00 
+2 AT_SIZE_T: 832
+
+Return value (AT_SIGNED_INT): 832
+--------------------------------
+
+Call 10: FSTAT
+Syscall done
+0 AT_INT: 4
+1 AT_STRUCT_STAT: 
+  st_dev: 49
+  st_ino: 2236139
+  st_mode: 33261
+  st_nlink: 1
+  st_uid: 0
+  st_gid: 0
+  st_rdev: 0
+  st_size: 1839792
+  st_blksize: 4096
+  st_blocks: 3600
+  st_atime: 1637573718
+  st_mtime: 1633178860
+  st_ctime: 1637073852
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 11: MMAP
+Syscall done
+0 AT_VOID_ADDR: 0x00000000
+1 AT_SIZE_T: 1852680
+2 AT_INT: 1
+3 AT_INT: 2050
+4 AT_INT: 4
+5 AT_OFF_T: 0
+
+Return value (AT_PASLR_FOLLOW): 0x7FB540F47000
+  [i] Print 0 of 0 bytes:
+--------------------------------
+
+Call 12: MPROTECT
+Syscall done
+0 AT_VOID_ADDR: 0x7FB540F6C000
+1 AT_SIZE_T: 1662976
+2 AT_INT: 0
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 13: MMAP
+Syscall done
+0 AT_VOID_ADDR: 0x7FB540F6C000
+1 AT_SIZE_T: 1355776
+2 AT_INT: 5
+3 AT_INT: 2066
+4 AT_INT: 4
+5 AT_OFF_T: 151552
+
+Return value (AT_PASLR_FOLLOW): 0x7FB540F6C000
+  [i] Print 120 of 1355776 bytes:
+  0xFF 35 02 90 19 00 FF 25 04 90 19 00 0F 1F 40 00 FF 25 02 90 19 00 68 2E 00 00 00 E9 E0 FF FF FF FF 25 FA 8F 19 00 68 2D 00 00 00 E9 D0 FF FF FF FF 25 F2 8F 19 00 68 2C 00 00 00 E9 C0 FF FF FF FF 25 EA 8F 19 00 68 00 00 00 00 E9 B0 FF FF FF FF 25 E2 8F 19 00 68 2B 00 00 00 E9 A0 FF FF FF FF 25 DA 8F 19 00 68 2A 00 00 00 E9 90 FF FF FF FF 25 D2 8F 19 00 68 29 
+--------------------------------
+
+Call 14: MMAP
+Syscall done
+0 AT_VOID_ADDR: 0x7FB5410B7000
+1 AT_SIZE_T: 303104
+2 AT_INT: 1
+3 AT_INT: 2066
+4 AT_INT: 4
+5 AT_OFF_T: 1507328
+
+Return value (AT_PASLR_FOLLOW): 0x7FB5410B7000
+  [i] Print 120 of 303104 bytes:
+  0x18 71 EB FF 74 71 EB FF 74 71 EB FF 74 71 EB FF 18 71 EB FF 40 72 EB FF 20 72 EB FF 00 72 EB FF E0 71 EB FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 55 43 53 34 2F 2F 00 49 53 4F 2D 31 30 36 34 36 2F 55 43 53 34 2F 00 55 43 53 2D 34 2F 2F 00 49 53 4F 2D 31 30 36 34 36 2F 55 43 53 34 2F 00 55 43 53 2D 34 42 45 2F 2F 
+--------------------------------
+
+Call 15: MMAP
+Syscall done
+0 AT_VOID_ADDR: 0x7FB541102000
+1 AT_SIZE_T: 24576
+2 AT_INT: 3
+3 AT_INT: 2066
+4 AT_INT: 4
+5 AT_OFF_T: 1810432
+
+Return value (AT_PASLR_FOLLOW): 0x7FB541102000
+  [i] Print 120 of 24576 bytes:
+  0x00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+--------------------------------
+
+Call 16: MMAP
+Syscall done
+0 AT_VOID_ADDR: 0x7FB541108000
+1 AT_SIZE_T: 13576
+2 AT_INT: 3
+3 AT_INT: 50
+4 AT_INT: 4294967295
+5 AT_OFF_T: 0
+
+Return value (AT_PASLR_FOLLOW): 0x7FB541108000
+  [i] Print 120 of 13576 bytes:
+  0x00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+--------------------------------
+
+Call 17: CLOSE
+Syscall done
+0 AT_INT: 4
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 18: MMAP
+Syscall done
+0 AT_VOID_ADDR: 0x00000000
+1 AT_SIZE_T: 8192
+2 AT_INT: 3
+3 AT_INT: 34
+4 AT_INT: 4294967295
+5 AT_OFF_T: 0
+
+Return value (AT_PASLR_FOLLOW): 0x7FB540F45000
+  [i] Print 120 of 8192 bytes:
+  0x00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+--------------------------------
+
+Call 19: ARCH_PRCTL
+[i] Argument 1 rewritten to type AT_VOID_ADDR
+Syscall done
+[i] Argument 1 rewritten to type AT_VOID_ADDR
+0 AT_INT: 4098
+1 AT_VOID_ADDR: 0x7FB540F45F40
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 20: MPROTECT
+Syscall done
+0 AT_VOID_ADDR: 0x7FB541102000
+1 AT_SIZE_T: 12288
+2 AT_INT: 1
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 21: MPROTECT
+Syscall done
+0 AT_VOID_ADDR: 0x5576D982F000
+1 AT_SIZE_T: 4096
+2 AT_INT: 1
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 22: MPROTECT
+Syscall done
+0 AT_VOID_ADDR: 0x7FB54113A000
+1 AT_SIZE_T: 4096
+2 AT_INT: 1
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 23: MUNMAP
+Syscall done
+0 AT_VOID_ADDR: 0x7FB54110C000
+1 AT_SIZE_T: 12664
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 24: BRK
+Syscall done
+0 AT_VOID_ADDR: 0x00000000
+
+Return value (AT_VOID_ADDR): 0x00000000
+--------------------------------
+
+Call 25: BRK
+Syscall done
+0 AT_VOID_ADDR: 0x5576DAD68000
+
+Return value (AT_VOID_ADDR): 0x00000000
+--------------------------------
+
+Call 26: FSTAT
+Syscall done
+0 AT_INT: 1
+1 AT_STRUCT_STAT: 
+  st_dev: 49
+  st_ino: 3942107
+  st_mode: 33188
+  st_nlink: 1
+  st_uid: 0
+  st_gid: 0
+  st_rdev: 0
+  st_size: 0
+  st_blksize: 4096
+  st_blocks: 0
+  st_atime: 1637579540
+  st_mtime: 1637579540
+  st_ctime: 1637579540
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 27: OPENAT
+Syscall done
+0 AT_INT: 4294967196
+1 AT_CHAR_PTR: /etc/hostname
+2 AT_INT: 0
+3 AT_MODE_T: 0
+
+Return value (AT_SIGNED_INT): 4
+--------------------------------
+
+Call 28: FSTAT
+Syscall done
+0 AT_INT: 4
+1 AT_STRUCT_STAT: 
+  st_dev: 49
+  st_ino: 3815892
+  st_mode: 33188
+  st_nlink: 1
+  st_uid: 0
+  st_gid: 0
+  st_rdev: 0
+  st_size: 10
+  st_blksize: 4096
+  st_blocks: 8
+  st_atime: 1637073861
+  st_mtime: 1636040980
+  st_ctime: 1637073861
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 29: FADVISE64
+Syscall done
+0 AT_INT: 4
+1 AT_OFF_T: 0
+2 AT_OFF_T: 0
+3 AT_INT: 2
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 30: MMAP
+Syscall done
+0 AT_VOID_ADDR: 0x00000000
+1 AT_SIZE_T: 139264
+2 AT_INT: 3
+3 AT_INT: 34
+4 AT_INT: 4294967295
+5 AT_OFF_T: 0
+
+Return value (AT_PASLR_FOLLOW): 0x7FB540F23000
+  [i] Print 120 of 139264 bytes:
+  0x00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+--------------------------------
+
+Call 31: READ
+Syscall done
+0 AT_INT: 4
+1 AT_OUT_BUFFER: 
+  [i] Print 120 of 131072 bytes:
+  0x75 62 75 6E 74 75 2D 32 30 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+2 AT_SIZE_T: 131072
+
+Return value (AT_SIGNED_INT): 10
+--------------------------------
+
+Call 32: WRITE
+Syscall done
+0 AT_INT: 1
+1 AT_CHAR_PTR: ubuntu-20
+
+2 AT_SIZE_T: 10
+
+Return value (AT_SIGNED_INT): 10
+--------------------------------
+
+Call 33: READ
+Syscall done
+0 AT_INT: 4
+1 AT_OUT_BUFFER: 
+  [i] Print 120 of 131072 bytes:
+  0x75 62 75 6E 74 75 2D 32 30 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+2 AT_SIZE_T: 131072
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 34: MUNMAP
+Syscall done
+0 AT_VOID_ADDR: 0x7FB540F23000
+1 AT_SIZE_T: 139264
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 35: CLOSE
+Syscall done
+0 AT_INT: 4
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 36: CLOSE
+Syscall done
+0 AT_INT: 1
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 37: CLOSE
+Syscall done
+0 AT_INT: 2
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 38: EXIT_GROUP
+0 AT_INT: 0
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Successfully written recording to 'recording.bin'

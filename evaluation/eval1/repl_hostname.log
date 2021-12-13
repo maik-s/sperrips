@@ -1,0 +1,469 @@
+Running "eval_hostname" with parametes: {"args":["/root/hostname"],"is_hex":false,"stdin":""}
+Modus: replaying
+Starting container
+[Replayer] Successfully read 29 syscalls from 'recording.bin' recording.
+
+Call 1: BRK
+Mapping (nil) -> (nil)
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists (nil) (-> (nil))
+Mapping 0x55cd39a9e000 -> 0x563d075cb000
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x00000000
+
+Return value (AT_VOID_ADDR): 0x00000000
+--------------------------------
+
+Call 2: UNAME
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists (nil) (-> (nil))
+Parameters equal (check rval: true): false
+[i] Replaying arguments
+[i] Patched child @ 0x7ffebabf53a0, success: true
+0 AT_STRUCT_UTSNAME: 
+  sysname: Linux
+  nodename: sperrips
+  release: 5.4.158-maiks
+  version: #1 SMP Wed Nov 10 16:04:26 CET 2021
+  machine: x86_64
+  domainname: (none)
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 3: ACCESS
+Mapping 0x7fd9460619b0 -> 0x7fd346f5a9b0
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists 0x7fd9460619b0 (-> 0x7fd346f5a9b0)
+Parameters equal (check rval: true): true
+0 AT_CHAR_PTR: /etc/ld.so.preload
+1 AT_INT: 4
+
+Return value (AT_SIGNED_INT): -2 (No such file or directory)
+--------------------------------
+
+Call 4: OPENAT
+Mapping 0x7fd94605eb67 -> 0x7fd346f57b67
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists 0x7fd94605eb67 (-> 0x7fd346f57b67)
+Parameters equal (check rval: true): true
+0 AT_INT: 4294967196
+1 AT_CHAR_PTR: /etc/ld.so.cache
+2 AT_INT: 524288
+3 AT_MODE_T: 0
+
+Return value (AT_SIGNED_INT): 4
+--------------------------------
+
+Call 5: FSTAT
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists (nil) (-> (nil))
+[StructStatComparer] st_ino not equal (896867 <-> 131614)
+[StructStatComparer] st_atime not equal
+[StructStatComparer] st_mtime not equal
+[StructStatComparer] st_ctime not equal
+Parameters equal (check rval: true): true
+0 AT_INT: 4
+1 AT_STRUCT_STAT: 
+  st_dev: 51
+  st_ino: 131614
+  st_mode: 33188
+  st_nlink: 1
+  st_uid: 0
+  st_gid: 0
+  st_rdev: 0
+  st_size: 9296
+  st_blksize: 4096
+  st_blocks: 24
+  st_atime: 1637682036
+  st_mtime: 1637681972
+  st_ctime: 1637681972
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 6: MMAP
+Mapping exists (nil) (-> (nil))
+Parameters equal (check rval: false): true
+Syscall done
+Read 9296 bytes from 0x7fd346f32000 : 9296
+Mapping exists (nil) (-> (nil))
+Mapping 0x7fd946039000 -> 0x7fd346f32000
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x00000000
+1 AT_SIZE_T: 9296
+2 AT_INT: 1
+3 AT_INT: 2
+4 AT_INT: 4
+5 AT_OFF_T: 0
+
+Return value (AT_PASLR_FOLLOW): 0x7FD346F32000
+  [i] Print 120 of 9296 bytes:
+  0x67 6C 69 62 63 2D 6C 64 2E 73 6F 2E 63 61 63 68 65 31 2E 31 79 00 00 00 C8 18 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 03 00 00 88 0B 00 00 95 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 03 00 00 B8 0B 00 00 C2 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 03 00 00 E2 0B 00 00 F1 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+--------------------------------
+
+Call 7: CLOSE
+Parameters equal (check rval: false): true
+Syscall done
+Parameters equal (check rval: true): true
+0 AT_INT: 4
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 8: OPENAT
+Mapping 0x7fd946068940 -> 0x7fd346f61940
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists 0x7fd946068940 (-> 0x7fd346f61940)
+Parameters equal (check rval: true): true
+0 AT_INT: 4294967196
+1 AT_CHAR_PTR: /lib/x86_64-linux-gnu/libc.so.6
+2 AT_INT: 524288
+3 AT_MODE_T: 0
+
+Return value (AT_SIGNED_INT): 4
+--------------------------------
+
+Call 9: READ
+Parameters equal (check rval: false): true
+Syscall done
+Mapping 0x7ffc7deb2f58 -> 0x7ffebabf4b38
+Parameters equal (check rval: true): true
+0 AT_INT: 4
+1 AT_OUT_BUFFER: 
+  [i] Print 120 of 832 bytes:
+  0x7F 45 4C 46 02 01 01 03 00 00 00 00 00 00 00 00 03 00 3E 00 01 00 00 00 40 6E 02 00 00 00 00 00 40 00 00 00 00 00 00 00 70 02 1C 00 00 00 00 00 00 00 00 00 40 00 38 00 0C 00 40 00 41 00 40 00 06 00 00 00 04 00 00 00 40 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00 A0 02 00 00 00 00 00 00 A0 02 00 00 00 00 00 00 08 00 00 00 00 00 00 00 
+2 AT_SIZE_T: 832
+
+Return value (AT_SIGNED_INT): 832
+--------------------------------
+
+Call 10: FSTAT
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists (nil) (-> (nil))
+[StructStatComparer] st_ino not equal (263129 <-> 1423186)
+[StructStatComparer] st_atime not equal
+[StructStatComparer] st_ctime not equal
+Parameters equal (check rval: true): true
+0 AT_INT: 4
+1 AT_STRUCT_STAT: 
+  st_dev: 51
+  st_ino: 1423186
+  st_mode: 33261
+  st_nlink: 1
+  st_uid: 0
+  st_gid: 0
+  st_rdev: 0
+  st_size: 1839792
+  st_blksize: 4096
+  st_blocks: 3600
+  st_atime: 1636040824
+  st_mtime: 1633178860
+  st_ctime: 1636040824
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 11: MMAP
+Mapping exists (nil) (-> (nil))
+Parameters equal (check rval: false): true
+Syscall done
+Read 0 bytes from 0x7fd346d6d000 : 1852680
+Mapping exists (nil) (-> (nil))
+Mapping 0x7fd945e74000 -> 0x7fd346d6d000
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x00000000
+1 AT_SIZE_T: 1852680
+2 AT_INT: 1
+3 AT_INT: 2050
+4 AT_INT: 4
+5 AT_OFF_T: 0
+
+Return value (AT_PASLR_FOLLOW): 0x7FD346D6D000
+  [i] Print 0 of 0 bytes:
+--------------------------------
+
+Call 12: MPROTECT
+Mapping 0x7fd945e99000 -> 0x7fd346d92000
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists 0x7fd945e99000 (-> 0x7fd346d92000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x7FD346D92000
+1 AT_SIZE_T: 1662976
+2 AT_INT: 0
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 13: MMAP
+Mapping exists 0x7fd945e99000 (-> 0x7fd346d92000)
+Parameters equal (check rval: false): true
+Syscall done
+Read 1355776 bytes from 0x7fd346d92000 : 1355776
+Mapping exists 0x7fd945e99000 (-> 0x7fd346d92000)
+Mapping exists 0x7fd945e99000 (-> 0x7fd346d92000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x7FD346D92000
+1 AT_SIZE_T: 1355776
+2 AT_INT: 5
+3 AT_INT: 2066
+4 AT_INT: 4
+5 AT_OFF_T: 151552
+
+Return value (AT_PASLR_FOLLOW): 0x7FD346D92000
+  [i] Print 120 of 1355776 bytes:
+  0xFF 35 02 90 19 00 FF 25 04 90 19 00 0F 1F 40 00 FF 25 02 90 19 00 68 2E 00 00 00 E9 E0 FF FF FF FF 25 FA 8F 19 00 68 2D 00 00 00 E9 D0 FF FF FF FF 25 F2 8F 19 00 68 2C 00 00 00 E9 C0 FF FF FF FF 25 EA 8F 19 00 68 00 00 00 00 E9 B0 FF FF FF FF 25 E2 8F 19 00 68 2B 00 00 00 E9 A0 FF FF FF FF 25 DA 8F 19 00 68 2A 00 00 00 E9 90 FF FF FF FF 25 D2 8F 19 00 68 29 
+--------------------------------
+
+Call 14: MMAP
+Mapping 0x7fd945fe4000 -> 0x7fd346edd000
+Parameters equal (check rval: false): true
+Syscall done
+Read 303104 bytes from 0x7fd346edd000 : 303104
+Mapping exists 0x7fd945fe4000 (-> 0x7fd346edd000)
+Mapping exists 0x7fd945fe4000 (-> 0x7fd346edd000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x7FD346EDD000
+1 AT_SIZE_T: 303104
+2 AT_INT: 1
+3 AT_INT: 2066
+4 AT_INT: 4
+5 AT_OFF_T: 1507328
+
+Return value (AT_PASLR_FOLLOW): 0x7FD346EDD000
+  [i] Print 120 of 303104 bytes:
+  0x18 71 EB FF 74 71 EB FF 74 71 EB FF 74 71 EB FF 18 71 EB FF 40 72 EB FF 20 72 EB FF 00 72 EB FF E0 71 EB FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 55 43 53 34 2F 2F 00 49 53 4F 2D 31 30 36 34 36 2F 55 43 53 34 2F 00 55 43 53 2D 34 2F 2F 00 49 53 4F 2D 31 30 36 34 36 2F 55 43 53 34 2F 00 55 43 53 2D 34 42 45 2F 2F 
+--------------------------------
+
+Call 15: MMAP
+Mapping 0x7fd94602f000 -> 0x7fd346f28000
+Parameters equal (check rval: false): true
+Syscall done
+Read 24576 bytes from 0x7fd346f28000 : 24576
+Mapping exists 0x7fd94602f000 (-> 0x7fd346f28000)
+Mapping exists 0x7fd94602f000 (-> 0x7fd346f28000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x7FD346F28000
+1 AT_SIZE_T: 24576
+2 AT_INT: 3
+3 AT_INT: 2066
+4 AT_INT: 4
+5 AT_OFF_T: 1810432
+
+Return value (AT_PASLR_FOLLOW): 0x7FD346F28000
+  [i] Print 120 of 24576 bytes:
+  0x00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+--------------------------------
+
+Call 16: MMAP
+Mapping 0x7fd946035000 -> 0x7fd346f2e000
+Parameters equal (check rval: false): true
+Syscall done
+Read 13576 bytes from 0x7fd346f2e000 : 13576
+Mapping exists 0x7fd946035000 (-> 0x7fd346f2e000)
+Mapping exists 0x7fd946035000 (-> 0x7fd346f2e000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x7FD346F2E000
+1 AT_SIZE_T: 13576
+2 AT_INT: 3
+3 AT_INT: 50
+4 AT_INT: 4294967295
+5 AT_OFF_T: 0
+
+Return value (AT_PASLR_FOLLOW): 0x7FD346F2E000
+  [i] Print 120 of 13576 bytes:
+  0x00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+--------------------------------
+
+Call 17: CLOSE
+Parameters equal (check rval: false): true
+Syscall done
+Parameters equal (check rval: true): true
+0 AT_INT: 4
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 18: MMAP
+Mapping exists (nil) (-> (nil))
+Parameters equal (check rval: false): true
+Syscall done
+Read 8192 bytes from 0x7fd346d6b000 : 8192
+Mapping exists (nil) (-> (nil))
+Mapping 0x7fd945e72000 -> 0x7fd346d6b000
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x00000000
+1 AT_SIZE_T: 8192
+2 AT_INT: 3
+3 AT_INT: 34
+4 AT_INT: 4294967295
+5 AT_OFF_T: 0
+
+Return value (AT_PASLR_FOLLOW): 0x7FD346D6B000
+  [i] Print 120 of 8192 bytes:
+  0x00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+--------------------------------
+
+Call 19: ARCH_PRCTL
+[i] Argument 1 rewritten to type AT_VOID_ADDR
+Mapping 0x7fd945e72f40 -> 0x7fd346d6bf40
+Parameters equal (check rval: false): true
+Syscall done
+[i] Argument 1 rewritten to type AT_VOID_ADDR
+Mapping exists 0x7fd945e72f40 (-> 0x7fd346d6bf40)
+Parameters equal (check rval: true): true
+0 AT_INT: 4098
+1 AT_VOID_ADDR: 0x7FD346D6BF40
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 20: MPROTECT
+Mapping exists 0x7fd94602f000 (-> 0x7fd346f28000)
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists 0x7fd94602f000 (-> 0x7fd346f28000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x7FD346F28000
+1 AT_SIZE_T: 12288
+2 AT_INT: 1
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 21: MPROTECT
+Mapping 0x55cd38816000 -> 0x563d06936000
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists 0x55cd38816000 (-> 0x563d06936000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x563D06936000
+1 AT_SIZE_T: 4096
+2 AT_INT: 1
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 22: MPROTECT
+Mapping 0x7fd946066000 -> 0x7fd346f5f000
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists 0x7fd946066000 (-> 0x7fd346f5f000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x7FD346F5F000
+1 AT_SIZE_T: 4096
+2 AT_INT: 1
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 23: MUNMAP
+Mapping exists 0x7fd946039000 (-> 0x7fd346f32000)
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists 0x7fd946039000 (-> 0x7fd346f32000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x7FD346F32000
+1 AT_SIZE_T: 9296
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 24: BRK
+Mapping exists (nil) (-> (nil))
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists (nil) (-> (nil))
+Mapping exists 0x55cd39a9e000 (-> 0x563d075cb000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x00000000
+
+Return value (AT_VOID_ADDR): 0x00000000
+--------------------------------
+
+Call 25: BRK
+Mapping 0x55cd39abf000 -> 0x563d075ec000
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists 0x55cd39abf000 (-> 0x563d075ec000)
+Mapping exists 0x55cd39abf000 (-> 0x563d075ec000)
+Parameters equal (check rval: true): true
+0 AT_VOID_ADDR: 0x563D075EC000
+
+Return value (AT_VOID_ADDR): 0x00000000
+--------------------------------
+
+Call 26: UNAME
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists (nil) (-> (nil))
+Parameters equal (check rval: true): false
+[i] Replaying arguments
+[i] Patched child @ 0x7ffebabf5160, success: true
+0 AT_STRUCT_UTSNAME: 
+  sysname: Linux
+  nodename: sperrips
+  release: 5.4.158-maiks
+  version: #1 SMP Wed Nov 10 16:04:26 CET 2021
+  machine: x86_64
+  domainname: (none)
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 27: FSTAT
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists (nil) (-> (nil))
+[StructStatComparer] st_ino not equal (514928 <-> 128247)
+[StructStatComparer] st_atime not equal
+[StructStatComparer] st_mtime not equal
+[StructStatComparer] st_ctime not equal
+Parameters equal (check rval: true): true
+0 AT_INT: 1
+1 AT_STRUCT_STAT: 
+  st_dev: 51
+  st_ino: 128247
+  st_mode: 33188
+  st_nlink: 1
+  st_uid: 0
+  st_gid: 0
+  st_rdev: 0
+  st_size: 0
+  st_blksize: 4096
+  st_blocks: 0
+  st_atime: 1637749046
+  st_mtime: 1637749046
+  st_ctime: 1637749046
+
+Return value (AT_SIGNED_INT): 0
+--------------------------------
+
+Call 28: WRITE
+Mapping 0x55cd39a9e330 -> 0x563d075cb330
+Parameters equal (check rval: false): true
+Syscall done
+Mapping exists 0x55cd39a9e330 (-> 0x563d075cb330)
+Parameters equal (check rval: true): true
+0 AT_INT: 1
+1 AT_CHAR_PTR: sperrips
+
+2 AT_SIZE_T: 9
+
+Return value (AT_SIGNED_INT): 9
+--------------------------------
+
+Call 29: EXIT_GROUP
+Parameters equal (check rval: false): true
+[i] Result: The replayed process behaved differently!
+Successfully written differences to 'differences.bin'
+Program exited with: 32
+Meaning: 32 => UNEXPECTED_MEMORY_CONTENT

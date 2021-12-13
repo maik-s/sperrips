@@ -1,0 +1,13 @@
+diff --git a/ping/ping_common.c b/ping/ping_common.c
+index 357c39d..f5713d4 100644
+--- a/ping/ping_common.c
++++ b/ping/ping_common.c
+@@ -571,7 +571,7 @@ int main_loop(struct ping_rts *rts, ping_func_set_st *fset, socket_st *sock,
+ 		/* Check exit conditions. */
+ 		if (rts->exiting)
+ 			break;
+-		if (rts->npackets && rts->nreceived + rts->nerrors >= rts->npackets)
++		if (rts->npackets && rts->ntransmitted >= rts->npackets)
+ 			break;
+ 		if (rts->deadline && rts->nerrors)
+ 			break;

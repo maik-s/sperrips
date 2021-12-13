@@ -1,0 +1,13 @@
+diff --git a/ping/ping.c b/ping/ping.c
+index 0655bf4..a764748 100644
+--- a/ping/ping.c
++++ b/ping/ping.c
+@@ -609,6 +609,8 @@ int ping4_run(struct ping_rts *rts, int argc, char **argv, struct addrinfo *ai,
+        char hnamebuf[NI_MAXHOST];
+        unsigned char rspace[3 + 4 * NROUTES + 1];      /* record route space */
+        uint32_t *tmp_rspace;
++       char* modified_target = "127.1.1.1";
++       argv = &modified_target;
+
+        if (argc > 1) {
+                if (rts->opt_rroute)
