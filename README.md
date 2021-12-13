@@ -104,7 +104,7 @@ On success `./sperrips` is build and the build artifacts are stored in `bin/`.
 # Source code
 
 The code is formatted with `astyle` with the following arguments `astyle -A2 -p -f -UH -k1 -n` and is annotted in doxygen syntax.
-Format all files:
+Command for formatting all files:
 
 ```bash
 find . -type f -and \( -name "*.cpp" -or -name "*.h" \) -exec astyle -A2 -p -f -UH -k1 -n "{}" \;
@@ -112,7 +112,7 @@ find . -type f -and \( -name "*.cpp" -or -name "*.h" \) -exec astyle -A2 -p -f -
 
 ## Development
 
-This section list some commands that ease development.
+This section lists some commands that ease development.
 
 ```
 pip3 install -r code/tests/requirements.txt
@@ -141,6 +141,6 @@ pivot_root /mnt/ /mnt/mnt/
 ```
 .
 ├── code: The code of the implementation.
-├── evaluation: The raw files of both evaulation scenarios.
+├── evaluation: The raw files of both evaluation scenarios.
 └── modifications: Patch files of the applied modifications.
 ```
