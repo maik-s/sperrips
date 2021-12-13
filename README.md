@@ -89,11 +89,12 @@ libprotoc 3.6.1
 
 <a name="bootstrap"></a>The containerized environment is bootstrapped via `debootstrap bullseye bullseye`.
 
-For protoPrint and protoMod utilities:
+To inspect the content of the `recording.bin` and `differences.bin` files, use the `code/utils/protoPrint.py` script.
+It has the following dependencies:
 
 ```bash
 apt install python3-pip
-pip3 install --user -r utils/requirements.txt
+pip3 install --user protobuf
 ```
 
 # <a name="compilation"></a> Compilation
@@ -114,7 +115,7 @@ find . -type f -and \( -name "*.cpp" -or -name "*.h" \) -exec astyle -A2 -p -f -
 This section list some commands that ease development.
 
 ```
-pip3 install -r tests/requirements.txt
+pip3 install -r code/tests/requirements.txt
 sudo apt install auditd # Includes ausyscall to dump syscall numbers
 ausyscall --dump | sed 1,1d | awk '{ print toupper($2) "\t = " $1";"}' > res/syscalls.txt
 ```
